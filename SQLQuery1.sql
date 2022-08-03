@@ -19,3 +19,26 @@ insert into salary_detail values(915, 42046 , 9516, 19031, 2000)
 select * 
 select * from salary_detail
 select * from Official_detail
+
+select sum(Emp_Salary) from Official_detail
+select avg(Emp_Salary) from salary_detail
+select sum(Emp_Salary) as 'Average' from Official_detail
+select avg(Emp_Salary) as 'Sum' from salary_detail
+select max(Emp_Salary) as 'Max' from salary_detail
+
+insert into Official_detail values(916,42046,'Java','Akhilesh')
+select * from Official_detail
+
+delete from Official_detail where id=916
+select * from Official_detail
+
+update Official_detail set Reporting_to='Akhilesh Tiwari' where id=915
+select * from Official_detail 
+
+select top(1) * from Official_detail
+
+alter table Personal_detail add phone nvarchar(11) NULL
+select * from Personal_detail
+
+alter table Personal_detail drop column phone
+select * from Personal_detail
